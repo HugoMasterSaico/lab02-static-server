@@ -1,5 +1,7 @@
 // Manejadores de rutas virtuales
- var fechaDeNacimiento = new Date(1981,10,22,1,45);
+ var fortune = require("./fortune");
+
+ var fechaDeNacimiento = new Date(1992,07,30,1,45);
  module.exports = {
      "/edad/Hugo-Velazquez" : function(req, res){
          res.writeHead(200,{
@@ -18,22 +20,23 @@
          // Envio la respuesta al cliente
          res.end(jsonResponse); 
 },
-      " / Getfortune " :  function (req,res) 
-      {
-          // Se obtiene El Mensaje de la suerte
-          var fortunePaper = {
-              " Mensaje "  : 
-              " La honestidad es  un  regalo muy caro , no lo esperes de gente barata "
+      " / Getfortune " :  function (req,res)  {
+         // // Se obtiene el mensaje de la suerte
+         // var fortunePaper = {
+         //     "mensaje" : 
+         //     "La honestidad es un regalo caro, no lo esperes de gente barata"
+         // };
+         // // Parseando a string el objetoRespuesta
+         // // de respuesta
+         // var jsonResponse = JSON.stringify(fortunePaper);
+         fortune.getFortune(function(fortunePaper){
+             // Se configura el encabezado de respuesta
+             // HTTP
+             res.writeHead(200,{
+                 "Content-Type" : "application/json"
+             });
+             // Respondemos el Objeto
+             res.end(fortunePaper);
+          });
+      }
  };
-          // Se CONFIGURACIÓN el Encabezado de Respuesta
-          // HTTP
-          Res . WriteHead ( 200 , {
-              " Content-Type "  :  " application / json "
- });
-          // Parseando una cadena el objetoRespuesta
-          // De Respuesta
-         var jsonResponse =  JSON . Stringify (fortunePaper);
-          // Respondemos el Objeto
-          Res . Extremo (jsonResponse);
- }
-};  

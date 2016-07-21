@@ -16,3 +16,4 @@ function hola(){
      console.log("> Cambiando color a " + color);
      document.body.style.backgroundColor = color;
  }
+ 

@@ -17,5 +17,23 @@
          JSON.stringify(objetoRespuesta);
          // Envio la respuesta al cliente
          res.end(jsonResponse); 
-     } 
- }; 
+},
+      " / Getfortune " :  function (req,res) 
+      {
+          // Se obtiene El Mensaje de la suerte
+          var fortunePaper = {
+              " Mensaje "  : 
+              " La honestidad es  un  regalo muy caro , no lo esperes de gente barata "
+ };
+          // Se CONFIGURACIÓN el Encabezado de Respuesta
+          // HTTP
+          Res . WriteHead ( 200 , {
+              " Content-Type "  :  " application / json "
+ });
+          // Parseando una cadena el objetoRespuesta
+          // De Respuesta
+         var jsonResponse =  JSON . Stringify (fortunePaper);
+          // Respondemos el Objeto
+          Res . Extremo (jsonResponse);
+ }
+}; 

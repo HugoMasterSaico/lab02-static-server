@@ -6,7 +6,7 @@
  //serve hara la funcion de servir
  exports.serve = function name(url, res) {
      //acompletar al static 
-     var filePath = config.STATIC_PATH + url;
+     var filePath = config.STATIC_PATH + url; //  todo  lo  asume apartir  de  el STATIC_PATH
      //   verificando si existe o no el archivo dentro del servidor
      // "exist" me permite saber si existe la rurta o Node
      fs.exists(filePath, function (exists) {

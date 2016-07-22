@@ -20,14 +20,16 @@
          // Envio la respuesta al cliente
          res.end(jsonResponse); 
 },
-      " / Getfortune " :  function (req,res)  {
-         // // Se obtiene el mensaje de la suerte
-         // var fortunePaper = {
-         //     "mensaje" : 
-         //     "La honestidad es un regalo caro, no lo esperes de gente barata"
-         // };
-         // // Parseando a string el objetoRespuesta
-         // // de respuesta
+      " / getfortune " :  function (req,res)  {
+          console.log(">se  solicita  fortuna....."),
+         /* // Se obtiene el mensaje de la suerte
+          var fortunePaper = {
+              "mensaje" : 
+              "La honestidad es un regalo caro, no lo esperes de gente barata"
+          };
+         // Parseando a string el objetoRespuesta
+         // de respuesta
+         */ 
          // var jsonResponse = JSON.stringify(fortunePaper);
          fortune.getFortune(function(fortunePaper){
              // Se configura el encabezado de respuesta

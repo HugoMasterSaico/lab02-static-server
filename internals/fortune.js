@@ -15,6 +15,7 @@ module.exports = {
                 " mongodb://127.0.0.1:27017/fortune");
                 var fortunePaper = {
                     "message":
+                    
                     "La honestidad es un regalo caro, no lo esperes de gente barata"
                 };
                 // Convirtiendo el fortunePaper de objeto

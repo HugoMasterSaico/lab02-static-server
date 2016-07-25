@@ -14,7 +14,7 @@ module.exports = {
                 " la base de datos:"+
                 " mongodb://127.0.0.1:27017/fortune");
                 var fortunePaper = {
-                    "mensaje":
+                    "message":
                     "La honestidad es un regalo caro, no lo esperes de gente barata"
                 };
                 // Convirtiendo el fortunePaper de objeto
@@ -25,26 +25,27 @@ module.exports = {
                 // como parametro el fortunepaper string
                 cb(fortunePaperResponse);
             }else{
-                //obtengo la  coleccion con  la  que  quiero  trabajar
-                var  papersCollection = db.collection("papaers");
+                // Obtengo la coleccion con la que quiero trabajar
+                var papersCollection = 
+                db.collection("papers");
+                
+                // Consulto todos los documentos de mi coleccion
+                var objetoRestultado = 
+                papersCollection.find({});
 
-                //consulto  todos  lo  documentos  de  mi coleccion
-                var objetoResultado = papersCollection.find({});
-
-                //Parseo el  Objeto resultado en  un  arreglo
-
-                objetoResultado.toArray(function (err, papers) {
-                    var fortunePaperResponse =
-                    JSON.stringify(papers[0]); // <---- un  elemento  al  azar que  sea  un paper  diferente  es un  arreglo  de  10  elementos paper.leng
-                    // cerrar  la  conexion entre el  cliente 
-                    // y la  base  de  datos
+                // Parseo el objeto resultado en un arreglo
+                objetoRestultado.toArray(function(err, papers){
+                    var fortunePaperResponse = 
+                    JSON.stringify(papers[0]);
+                    // Cerrar la conexion entre el cliente
+                    // y la base de datos
                     db.close()
-                    // invoco  al  cb  pasandole como parametro
-                    // la  respuesta
-                    cd(fortunePaperResponse);
-                })
+                    // Invoco al cb pasandole como parametro
+                    // la respuesta
+                    console.log("> La fortuna es: " + fortunePaperResponse);
+                    cb(fortunePaperResponse);
+                });
             }
         });
-
     }
 };

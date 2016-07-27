@@ -6,7 +6,6 @@ function getFortuneFromServer(){
         swal({
             title: "¡TU FORTUNA!",
             text: data.message,
-            
             imageUrl: "img/caja-sorpresa.gif"
         });
     },"json");

@@ -1,6 +1,10 @@
 [
     {
+<<<<<<< HEAD
         "message": "Nada  es  imposible  si  tu lo haces  posibol"
+=======
+        "message": "Nada  es  imposible  si  tu lo haces  posible"
+>>>>>>> 7c7b45c25cb2f432f891202ef65e45dda964a0f5
     },
     {
         "message": "Si te reusas a aceptar cualquier cosa, aceptando solo lo mejor, obtendras lo mejor mas a menudo"

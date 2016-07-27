@@ -1,3 +1,7 @@
+/*colocamos  las  frases  que  vendran dentro  de la  galleta 
+esta inf. la  jalaremos  con  el  mongo para  no estar  
+escribiendo  1x1 ("de  manera mas  grafica")
+*/
 [
     {
         "message": "Un amigo solo pregunta por tu tiempo, no por tu dinero"

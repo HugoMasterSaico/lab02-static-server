@@ -1,0 +1,5 @@
+Npm install
+Bower install materialize
+Bower –version
+Bower init
+Npm start—el servidor 

@@ -36,8 +36,10 @@ module.exports = {
 
                 // Parseo el objeto resultado en un arreglo
                 objetoRestultado.toArray(function(err, papers){
-                    var fortunePaperResponse = 
-                    JSON.stringify(papers[0]);
+                    var randomIndex = 
+                     getRandomArbitrary(0, papers.length);
+                     console.log("> RandomIndex calculated: " + randomIndex) 
+                    JSON.stringify(papers[randomIndex]);
                     // Cerrar la conexion entre el cliente
                     // y la base de datos
                     db.close()
@@ -50,3 +52,7 @@ module.exports = {
         });
     }
 };
+
+function getRandomArbitrary(min, max) {
+    return 0;
+} 

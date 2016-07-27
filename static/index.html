@@ -1,29 +1,69 @@
+<!DOCTYPE html>
 <html lang="en">
-     <head>
-      <meta charset="UTF-8">
-     <link 
+<head>
+    <meta charset="UTF-8">
+    <!-- Import GOOGLE ICON FONT FAMILY -->
+    <link 
     rel="stylesheet" 
-    href="./vendor/sweetalert/dist/sweetalert.css">
-      <link rel="stylesheet" href="./css/site.css">
-      <title>Mis lugares Favoritos</title>
-  </head>
- <body>
-     <!-- Contenido -->
-     <h1>Fortune Cookie</h1>
-     <div id="title">
-         <p>
-             Si tu fortuna quiere saber, 
-             la galleta de la suerte debes de romper.
-         </p>
-     </div>
-     <div id="cookie">
-         <button onclick="getFortuneFromServer()">
-             ROMPE LA GALLETA
-         </button>
-     </div>  
-   <!-- Seccion de Scripts -->
-   <script src="./vendor/jquery/dist/jquery.js"></script>
-   <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
-   <script src="./js/site.js"></script>
-  </body>
-  </html>   
+    href="http://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Para importar localmente 
+    http://stackoverflow.com/questions/31283977/material-design-lite-fonts-and-icons -->
+    <!-- Import Materialize -->
+    <link rel="stylesheet" 
+    href="./vendor/materialize/bin/materialize.css">
+    <link 
+    rel="stylesheet" 
+    href="./vendor/sweetalert/dist/sweetalert.css">   
+    <title>Mis lugares Favoritos</title>
+</head>
+<body>
+    <!-- Contenido -->     
+    <div class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class="header center blue-text">
+                    DEsCuBrE Tu SuErTe <p>
+                 ("GALLETA DE LA SUERTE")
+                </h1>
+                <div class="row center">
+                    <h5 class="header col s12 blue-text text-lighten-5">
+                      ""  :( :$ DA CLICK;) :D XD ""
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="parallax">
+            <img src="img/china1.jpg">
+        </div>
+    </div>
+    <div class="section white">
+        <div class="row cener container">
+            <MARQUEE><h2 class="header center">Vamos rompe  la  galleta y  descubriras  tu  suerte.</h2></MARQUEE>
+            
+            <div class="center">
+                <a onclick="getFortuneFromServer()"
+                    class="waves-effect waves-light btn-large">
+                    <i class="large material-icons left">visibility</i> ROMPEME:o
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/china2.jpg">
+        </div>
+    </div>
+     
+ <!--colocamos un video  en  esta  parte-->
+     <div class="video-container">
+        <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+    <!-- Seccion de Scripts -->
+    <script src="./vendor/jquery/dist/jquery.min.js"></script>
+    <script src="./vendor/materialize/bin/materialize.js"></script>
+    <script src="./vendor/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js/site.js"></script>
+</body>
+</html> 
